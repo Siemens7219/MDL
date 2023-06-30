@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCD</title>
+  <link rel="stylesheet" href="style1.css">
+ </head>
+
+<body>
+ 
+  
+  <div class="container">
+   
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Railway Consumer Depots</h2>
+    <H>Designed By: MSDAC</H>
+    <p>
+      1. Railway Consumer Depots (RCDs) store and distribute High-Speed Diesel Oil (HSD) for diesel locomotives in Indian Railways.
+      <br>
+      2. They maintain fuel quality, infrastructure, and comply with safety and environmental regulations.
+      <br>
+      3. RCDs coordinate with operational schedules and ensure timely refueling to prevent disruptions.
+      <br>
+      4. Inspections and audits are conducted to ensure safe and efficient functioning.
+      <br>
+      5. RCDs play a vital role in reliable and uninterrupted operation of diesel locomotives in the railway network.<br>
+    
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter30Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>RCD DRAWING </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 30);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter30Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1-wO9VjCPBLrNW0zwvw_0prvgzAx_s9Ml/view?usp=drive_link");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

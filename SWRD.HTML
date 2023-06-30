@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWRD</title>
+  <link rel="stylesheet" href="style1.css">
+  
+    
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Station Working Rule Diagram (SWRD)
+    </h2>
+    <H>Designed By: Contractor </H>
+    <p>
+      1. Station working rules in railways cover train movements, platform management, signaling, passenger handling, shunting, marshalling, emergency procedures, and worksite protection.
+      <br>
+      2. Detailed and complex, they govern station operations and ensure safety.
+      <br>
+      3. Rules include dispatching protocols, passenger handling, and emergency procedures.
+      <br>
+      4. Address worksite protection to maintain safety on tracks and within the station premises.
+      <br>
+      5. Crucial for safe and efficient operation of railway stations.<br>
+    
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter90Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>SWRD Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 90);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter90Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1AZFbxzuQANL14Vsk4ql8lkz3D435kcQn/view?usp=sharing");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

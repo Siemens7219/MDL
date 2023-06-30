@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&T Layout</title>
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>S&T Equipment Layout Of SM Room
+    </h2>
+    <H>Designed By: EI-SRAPL </H>
+    <p>
+      1. S&T Layout for SM (Station Master) rooms onboard trains are for efficient monitoring, control, and
+      communication between train crew and railway network.<br>
+      2. Include the control desk,signaling equipment,communication systems, train control systems, display and
+      monitoring devices, power supply and backup.<br>
+      3. The layout aims to facilitate efficient monitoring, control, and communication between the train crew and the
+      railway network.<br>
+
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter20Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>SM Room Layout Drawing </b></button>
+    </div>
+  </div>
+  <script>
+    // Retrieve the selected date from the cookie
+    function getCookieValue(name) {
+      var cookies = document.cookie.split(";");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return null;
+    }
+
+    var selectedDate = getCookieValue("selectedDate");
+    if (selectedDate) {
+      var date = new Date(selectedDate);
+      date.setDate(date.getDate() + 20);
+
+      var day = date.getDate();
+      var month = date.toLocaleString("default", { month: "long" });
+      var year = date.getFullYear();
+
+      var formattedDate = day + " " + month + " " + year;
+      document.getElementById("dateAfter20Days").textContent = formattedDate;
+    }
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1hr74g-8lhRxVnDG7VokLuar4vlTFJW3t/view?usp=sharing");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+
+</html>

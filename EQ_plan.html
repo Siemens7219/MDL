@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQ Layout Plan</title>
+  <link rel="stylesheet" href="style1.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Equipment Layout Plan</h2>
+    <H>Designed By: pending
+
+    </H>
+
+    <p>
+      1. Equipment layout plans determine optimal placement of signaling, control, and communication equipment in railway facilities.
+      <br>
+      2. Workstations provide clear visibility and access for monitoring and control.
+      <br>
+      3. Workstations provide clear visibility and access for monitoring and control.
+      <br>
+      4. Ventilation and environmental controls maintain proper conditions for equipment.
+      <br>
+      5. Safety measures and accessibility for maintenance are incorporated into the layout plan.<br>
+    
+   
+    </p>
+    <h3>Task Should Be Submitted Within:  pending</h3>
+    <p class="d" id="dateAfter20Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>Layout Drawing pending </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 20);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter20Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1_KYiAyp_P75oS1J1xG8a91V1Ww73X3PR/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

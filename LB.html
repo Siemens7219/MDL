@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Box</title>
+  <link rel="stylesheet" href="style1.css">
+  </head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Location Box Details With Location Wiring Diagram
+    </h2>
+    <H>Designed By: Contractor </H>
+    
+    
+
+    <p>
+      1. Indian Railways will double lock all "location boxes" along tracks to enhance safety after the Odisha disaster.
+      <br>
+      2. Currently, only relay rooms at stations have double locks, but location boxes will also be secured.
+      <br>
+      3. Maintenance staff will not be allowed to hide minor faults.
+      <br>
+     
+     
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter70Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>Location Box Drawing</b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 70);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter70Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/17x8ulJL4RQfMAwmoXCKT7diGGrEFLya7/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

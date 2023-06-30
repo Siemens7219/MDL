@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP</title>
+  <link rel="stylesheet" href="style1.css">
+ </head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Signal Interlocking Plan
+    </h2>
+    <H>Designed By: Railway </H>
+    <p>
+      1. The signal interlocking plan in railway mobility involves coordinating signals, switches, and track circuits.<br>
+      2. Used to ensure safe and efficient train operations. <br>
+      3. Key aspects include signal placement, track circuit configuration, interlocking mechanisms.<br>      
+      4. Experts in railway signaling are involved in designing and maintaining the interlocking plan to ensure the safety of train movements.<br>
+    
+    </p>
+    <h3> Approved Date of SIP: </h3>
+    <p class="d" id="dateAfter20Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>SIP Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate()+0);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter20Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1Am_ZgLkp4vkqucsYtU3LvsXa0NWWgs_X/view?usp=drive_link");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

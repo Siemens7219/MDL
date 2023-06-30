@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTC</title>
+  <link rel="stylesheet" href="style1.css">
+ 
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Cable Termination Chart
+    </h2>
+    <H>Designed By: Contractor </H>
+    <p>
+      1. Cable termination rack organizes cables and relays in the relay room using specific relay types.<br>
+      2. Relay rack frame made of U angles and angle plates.
+      <br>
+      3. Quality relay racks from reputable firms are used.<br>
+      4. Terminal blocks or polyamide DIN-rail mounted terminals secured on a Hylum sheet for termination.
+      <br>
+      5. Wiring, testing, and compliance verification conducted, including insulation resistance with adherence to RDSO standards.<br>
+    
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter70Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>CTC Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 70);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter70Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1eTdYSO4TYOP5-vg_nNpbCv0h9SVg0zyA/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

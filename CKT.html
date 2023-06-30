@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface Circuits</title>
+  <link rel="stylesheet" href="style1.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Interface Circuits</h2>
+    <H>Designed By: EI-SRAPL </H>
+
+    <p>
+      1. User Interface Circuits (UICs) are electrical circuits in railway indoor areas.
+      <br>
+      2. They include power distribution charts, signal lighting circuits, and indoor floor plans.<br>
+      3. UICs aid in designing and maintaining electrical systems in railway infrastructure.
+      <br>
+      4. They ensure safe and efficient operations.
+      <br>
+      5. Located at stations, control rooms, and signaling installations.<br>
+    
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter45Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT: </h4>
+      <button onclick="openPDF()"><b>Interface Circuit Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 45);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter45Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1m8TXoNapuObD7tNFDYYvd6jMnZaIoNDm/view?usp=sharings://drive.google.com/file/d/1W-bH6sbFy6yqDUncucxeOUdCy3kCsl1j/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

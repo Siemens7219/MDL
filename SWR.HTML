@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWR</title>
+  <link rel="stylesheet" href="style1.css">
+  
+      
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Station Working Rule (SWR)
+    </h2>
+    <H>Designed By: Railway </H>
+    <p>
+      1. SWR ensures safe operations at stations, covering line clear, signal reception, dispatch, level crossings, shunting, and communication during failures.
+      <br>
+      2. SWR must be concise and unambiguous, separate from general rules.
+      <br>
+      3. DSO, DSTE, and DEE can modify it; review every 5 years or with 5 amendment slips.
+      <br>
+      4. Staff in independent duties must sign a declaration register showing their understanding.<br>
+      5. SWR enhances safety and regulates station operations.<br>
+
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter90Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>SWR Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 90);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter90Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1vitWBkLFYoYG2qP5KMvNKZWOYfN8Ia-k/view?usp=sharing");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

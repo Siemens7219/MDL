@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE</title>
+  <link rel="stylesheet" href="style1.css">
+  
+      
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>ACE Plan</h2>
+    <H>Designed By: MSDAC
+
+    </H>
+    <p>
+      1. Axle counter evaluators process signals from axle counters to determine train occupancy in track sections.
+      <br>
+      2. Track sections are divided into blocks delimited by axle counters.<br>
+      3. Evaluator units in control centers analyze signals and detect anomalies.
+      <br>
+      4. Occupancy status is determined for each block, crucial for train control.
+      <br>
+      5. Maintenance and monitoring ensure proper functioning of axle counter evaluators.<br>
+    
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter30Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT :</h4>
+      <button onclick="openPDF()"><b>ACE Drawing</b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 30);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter30Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1W-bH6sbFy6yqDUncucxeOUdCy3kCsl1j/view?usp=drive_link');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

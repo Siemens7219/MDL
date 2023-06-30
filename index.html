@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <title>MDL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            font-size: 30px;
+        }
+
+        h1,
+        h2 {
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="logo" href="index.html">
+        <img src="slogo.png" alt="Logo">
+    </a>
+    <h1>Welcome To Siemens Mobility Industries</h1>
+    <h2>Master Drawing List</h2>
+
+    <div class="p">
+        <button id="openPopupBtn"> <b>Enter The Date Of Approval of SIP</b> </button>
+
+        <div id="popupContainer" class="popup-container">
+            <div class="popup">
+                <h3>Select a Date</h3>
+                <input type="date" id="dateInput">
+                <button id="selectDateBtn"> Select </button>
+            </div>
+        </div>
+
+        <div id="selectedDateContainer" style="display: none;">
+            <h3>Approval Date of SIP:</h3>
+            <p id="selectedDate"></p>
+        </div>
+    </div>
+    <div class="search">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search Categories...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropdown-button">&#8942;</button>
+        <div class="dropdown-content">
+            <!-- <a href="" target="_blank">ESP</a> -->
+            <a href="SIP.html" target="_blank">SIP</a>
+            <a href="layout_SM.html" target="_blank">Layout Of SM Room</a>
+            <a href="layout_relay.html" target="_blank">Layout of Relay Room</a>
+            <a href="layout_IPS.html" target="_blank">Layout of IPS Room</a>
+            <a href="layout_battery.html" target="_blank">Layout of Battery Room</a>
+            <a href="VDU.html" target="_blank">VDU Layout Plan</a>
+            <a href="RCC.html" target="_blank">RCC</a>
+            <a href="DDP.html" target="_blank">DDP</a>
+            <a href="RCD.html" target="_blank">RCD</a>
+            <a href="ACE.html" target="_blank">ACE Plan</a>
+            <a href="OFC.html" target="_blank">Cable jointing Details For OFC Cables</a>
+            <a href="CKT.html" target="_blank">Interface Circuits</a>
+            <a href="CCP.html" target="_blank">CCP</a>
+            <a href="CRP.html" target="_blank">CRP</a>
+            <a href="LB.html" target="_blank">Location Box Details</a>
+            <a href="CTC.html" target="_blank">Cable Termination Chart</a>
+            <a href="logic_ckt.html" target="_blank">Application Logic Circuits</a>
+            <a href="SWR.HTML" target="_blank">SWR</a>
+            <a href="SWRD.HTML" target="_blank">SWRD</a>
+            <!-- <a href="EQ_plan.html" target="_blank">Equipment Layout Plan</a> -->
+            <!-- Add more items as needed -->
+        </div>
+    </div>
+    <div class="bookshelf" id="bookshelf">
+
+        <div class="book">
+            <h3>SIP</h3>
+            <a class="pdf-button" href="SIP.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Layout of SM Room</h3>
+            <a class="pdf-button" href="layout_SM.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Layout of Relay Room </h3>
+            <a class="pdf-button" href="layout_relay.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Layout of IPS Room</h3>
+            <a class="pdf-button" href="layout_IPS.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Layout of Battery Room</h3>
+            <a class="pdf-button" href="layout_battery.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>VDU Layout Plan</h3>
+            <a class="pdf-button" href="VDU.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>RCC </h3>
+            <a class="pdf-button" href="RCC.html" target="_blank">Details</a>
+        </div>
+
+        <div class="book">
+            <h3>DDP</h3>
+            <a class="pdf-button" href="DDP.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>RCD</h3>
+            <a class="pdf-button" href="RCD.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>ACE Plan</h3>
+            <a class="pdf-button" href="ACE.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Cable jointing Details For OFC Cables</h3>
+            <a class="pdf-button" href="OFC.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Interface Circuits </h3>
+            <a class="pdf-button" href="CKT.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>CCP</h3>
+            <a class="pdf-button" href="CCP.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>CRP</h3>
+            <a class="pdf-button" href="CRP.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Location Box Details</h3>
+            <a class="pdf-button" href="LB.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Cable Termination Chart</h3>
+            <a class="pdf-button" href="CTC.html" target="_blank">Details</a>
+        </div>
+        <div class="book">
+            <h3>Application Logic Circuits</h3>
+            <a class="pdf-button" href="logic_ckt.html" target="_blank">Details</a>
+        </div>
+
+        <div class="book">
+            <h3>SWR</h3>
+            <a class="pdf-button" href="SWR.HTML" target="_blank">Details</a>
+        </div>
+
+        <div class="book">
+            <h3>SWRD</h3>
+            <a class="pdf-button" href="SWRD.HTML" target="_blank">Details</a>
+        </div>
+        <!-- <div class="book">
+            <h3>Equipment Layout Plan</h3>
+            <a class="pdf-button" href="EQ_plan.html" target="_blank">Details</a>
+        </div> -->
+    </div>
+    <footer>
+        <div>
+            <p class="sm2">© Siemens Mobility 2023</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

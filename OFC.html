@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFC Cables</title>
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Cable jointing details for OFC Cables
+    </h2>
+    <H>Designed By: Contractor </H>
+    <p>
+      1. OFC serves as a communication backbone in railways for reliable and high-speed data transfer.
+      <br>
+      2. It is used for signaling, control systems, and train communication, enhancing safety and operational
+      efficiency.
+      <br>
+      3. OFC networks incorporate redundancy measures to ensure uninterrupted communication.
+      <br>
+      4. Fiber optic sensors embedded in OFC enable monitoring of parameters along the tracks.
+
+
+
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter30Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>OFC Cable Drawing  </b></button>
+    </div>
+  </div>
+  <script>
+    // Retrieve the selected date from the cookie
+    function getCookieValue(name) {
+      var cookies = document.cookie.split(";");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return null;
+    }
+
+    var selectedDate = getCookieValue("selectedDate");
+    if (selectedDate) {
+      var date = new Date(selectedDate);
+      date.setDate(date.getDate() + 30);
+
+      var day = date.getDate();
+      var month = date.toLocaleString("default", { month: "long" });
+      var year = date.getFullYear();
+
+      var formattedDate = day + " " + month + " " + year;
+      document.getElementById("dateAfter30Days").textContent = formattedDate;
+    }
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1W-bH6sbFy6yqDUncucxeOUdCy3kCsl1j/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+
+</html>

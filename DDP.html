@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDP</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>DP DETECTION POINT</h2>
+    <H>Designed By: MSDAC</H>
+    <p>
+      1. DDP is DP Detection Point in railways.<br>
+      2. DDP Contains all the information regarding layout and placement of DPs on track.<br>
+      3. Track sections are divided for DP in DDP.<br>
+      
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter30Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>DDP Drawing </b></button>
+    </div>
+  </div>
+  <script>
+    // Retrieve the selected date from the cookie
+    function getCookieValue(name) {
+      var cookies = document.cookie.split(";");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return null;
+    }
+
+    var selectedDate = getCookieValue("selectedDate");
+    if (selectedDate) {
+      var date = new Date(selectedDate);
+      date.setDate(date.getDate() + 30);
+
+      var day = date.getDate();
+      var month = date.toLocaleString("default", { month: "long" });
+      var year = date.getFullYear();
+
+      var formattedDate = day + " " + month + " " + year;
+      document.getElementById("dateAfter30Days").textContent = formattedDate;
+    }
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1BiyM92iyyx9OZ43gK2zhWp3qOK5COPje/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VDU</title>
+  <link rel="stylesheet" href="style1.css">
+ 
+     
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>VDU Layout Plan</h2>
+    <H>Designed By: EI-SRAPL </H>
+    <p>
+      1. Visual Display Units (VDUs) present visual information in railway systems.
+      <br>
+      2. Used in train control, signaling, passenger information, and maintenance systems.
+      <br>
+      3. Real-time visualization of critical data enhances situational awareness.
+      <br>
+      4. Aid in decision-making for safe and efficient railway operations.
+      <br>
+      5. Found in control rooms, train cabins, and passenger areas.<br>
+ 
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p  id="dateAfter25Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT:</h4>
+      <button onclick="openPDF()"><b>VDU Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 25);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter25Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open("https://drive.google.com/file/d/1NZh0lX3AKQhn2JObsIPg0_bcjGRE3d5h/view?usp=sharing");
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>

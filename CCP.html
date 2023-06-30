@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCP</title>
+  <link rel="stylesheet" href="style1.css">
+ 
+</head>
+
+<body>
+  <div class="container">
+    <h1>SIEMENS MOBILITY</h1>
+    <h2>Cable Courage Plan (CCP)
+    </h2>
+    <H>Designed By: Contractor
+    </H>
+    <p>
+      1. CCP  includes the design layout of the laying of cables required for S&T in railways.<br>
+      2. It contains all the detailing about the cores that will be used.<br>
+      3. Measurement 1.5 sqmm diamrter core is fixed by MSDAC.<br>
+      4. It contain all the detailing about the laying alighnemt of cables in outdoors.<br>
+      
+   
+    </p>
+    <h3>Task Should Be Submitted Within: </h3>
+    <p class="d" id="dateAfter50Days"></p>
+    <div class="container">
+      <h4>RELATED DOCUMENT :</h4>
+      <button onclick="openPDF()"><b>CCP Drawing </b></button>
+    </div>
+  </div>
+  <script>
+// Retrieve the selected date from the cookie
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+var selectedDate = getCookieValue("selectedDate");
+if (selectedDate) {
+  var date = new Date(selectedDate);
+  date.setDate(date.getDate() + 50);
+
+  var day = date.getDate();
+  var month = date.toLocaleString("default", { month: "long" });
+  var year = date.getFullYear();
+
+  var formattedDate = day + " " + month + " " + year;
+  document.getElementById("dateAfter50Days").textContent = formattedDate;
+}
+
+
+    function openPDF() {
+      window.open('https://drive.google.com/file/d/1RdMgbKqpG4ZG8AAyDOS-bek3ZNuvnMYr/view?usp=sharing');
+    }
+
+  </script>
+  <script src="index1.js"></script>
+</body>
+</html>
