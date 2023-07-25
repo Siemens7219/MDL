@@ -1,24 +1,29 @@
  /* CSS styling for the bookshelf */
 
   @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Sriracha&display=swap');
-  h1{
-    font-size: 30px;
-}
-h1 ,h2{
-color: black;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  
+       .n{
+            font-size: 30px;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+       
+      #m{
+            color:#fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
 .k{
 
 font-size: 50px;
 }
  body {
-    /* background-color: #f4f4f4; */
-    /* background-color: #001134;
-     */
+ 
      color: black;
-     background-color: white;
+    
+    background-image: url(b.webp);
+    
     font-family: Arial, sans-serif;
 }
 h1 {
@@ -27,6 +32,7 @@ text-align: center;
 font-size: 24px;
 margin-bottom: 20px;
 padding-top: 20px;
+color: #fff;
 }
 h2 {
     font-family: 'Times New Roman', Times, serif, sans-serif;
@@ -36,6 +42,7 @@ h2 {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 20px;
+    color: #fff;
 }
 
 .bookshelf {
@@ -51,7 +58,7 @@ h2 {
     width: 250px;
     height: 120px;
     /* background-color:white; */
-    background-color: #34a788de;
+    background-color: #fff;
 
     border-radius: 5px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -93,7 +100,7 @@ h2 {
     font-weight: bold;
     text-decoration: none;
     /* background-color: #4CAF50; */
-    background-color: #001134;
+    background-color:black;
     
     color: #fff;
     border-radius: 4px;
@@ -102,7 +109,7 @@ h2 {
 
 .book .pdf-button:hover {
     /* background-color: #45a049;*/
-      background-color: #001134;
+      background-color: black;
     
 } 
 
@@ -143,7 +150,7 @@ h2 {
     padding: 10px 16px;
     font-size: 16px;
     /* background-color: #4CAF50; */
-    background-color: #34a788de;
+    background-color: #fff;
     color: black;
     border: black;
     cursor: pointer;
@@ -152,8 +159,8 @@ button {
     padding: 10px 16px;
     font-size: 16px;
     /* background-color: #4CAF50; */
-    background-color: #34a788de;
-    color: black;
+    background-color:black;
+    color: #fff;
     border: black;
     cursor: pointer;
 }
@@ -260,11 +267,12 @@ display: block;
     padding-top: 5px;
     text-align: center;
     font-weight: bold;
+    color: #fff;
 }
 .contact-info
 {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   color: black;
+   color: #fff;
    font-size: 20px;
 }
 a
